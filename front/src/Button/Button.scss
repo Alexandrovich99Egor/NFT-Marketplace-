@@ -1,0 +1,15 @@
+@import '../Variables/Variables.scss';
+
+.button {
+    width: 195rem;
+    padding: 21rem 30rem;
+    font-family: $FontsFamilyWorkSans;
+    font-size: 18rem;
+    font-weight: 600;
+    line-height: 21rem;
+    border: 1rem solid $ColorOrange;
+    white-space: nowrap;
+    color: $ColorOrange;
+    background: transparent;
+    cursor: pointer;
+}

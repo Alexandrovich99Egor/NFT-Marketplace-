@@ -1,15 +1,16 @@
-
+import React from "react";
+import './GlobalCss/Global.scss';
+import Header from "./Header/Header";
+import SectionHero from "./SectionHero/SectionHero";
 
 
 function App() {
     return (
-        <div className="div">
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est voluptates nisi harum ea laborum debitis iusto repudiandae accusantium tempora porro corporis perferendis obcaecati aut, nulla rerum unde ut quibusdam dolor.
-            </p>
+        <div className="wrapper">
+            <Header />
+            <SectionHero />
         </div>
     )
-
 }
 
 export default App;

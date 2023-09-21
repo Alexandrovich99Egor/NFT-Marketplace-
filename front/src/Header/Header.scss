@@ -1,0 +1,37 @@
+@import '../Variables/Variables.scss';
+
+.header {
+
+
+    &__container {
+        padding: 30rem 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    &__image {
+        max-width: 80rem;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 161rem;
+
+    }
+
+    &__menu {
+        display: flex;
+        gap: 64rem;
+    }
+
+
+    &__menu-link {
+        color: $ColorWhite;
+        font-family: $FontsFamilyWorkSans;
+        font-size: 18rem;
+    }
+
+}

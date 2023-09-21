@@ -1,0 +1,136 @@
+@import '../Variables/Variables.scss';
+
+.hero {
+    margin-top: 180rem;
+    position: relative;
+
+
+    &__container {
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 160rem;
+            height: 160rem;
+            background-color: #6D5B7266;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 120%);
+            border-radius: 100%;
+            z-index: -3;
+        }
+    }
+
+
+    &__title {
+        display: block;
+        max-width: 710rem;
+        font: $FontsOption-SectionHero-Title;
+        color: $ColorWhite;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 50rem;
+
+    }
+
+    &__image {
+        max-width: 580rem;
+    }
+
+    &__buttons {
+        margin-top: 65rem;
+    }
+
+    &__counter {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        max-width: 650rem;
+    }
+
+    &__counter-title {
+        margin-top: 120rem;
+        color: $ColorWhite;
+        font-family: $FontsFamilyOxanium;
+        font-size: 60rem;
+        line-height: 80rem;
+    }
+
+
+    &__counter-sub-title {
+        color: #9B9E9A;
+        font-family: $FontsFamilyWorkSans;
+        font-weight: 400;
+        font-size: 25rem;
+        line-height: 35rem;
+    }
+
+    &__images {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(0%, -25%);
+        z-index: -1;
+        max-height: 700rem;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 800rem;
+            height: 1150rem;
+            top: 0;
+            right: 0;
+            transform: translate(18%, -15%);
+            background-color: #4F464E73;
+            backdrop-filter: blur(5px);
+            z-index: -3;
+        }
+
+    }
+
+    &__image-sub-title {
+        font-size: 20rem;
+        color: #9B9E9A;
+    }
+
+    &__image-about {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $ColorWhite;
+        padding: 30rem 60rem;
+    }
+
+
+    &__clients {
+        margin-top: 200rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__background {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0%, -50%);
+        z-index: -10;
+    }
+}
+
+
+
+
+.hero__btn {
+    background-color: $ColorOrange;
+    color: $ColorBlack;
+}
+
+.hero-btn-bg-orange {
+    background-color: $ColorOrange;
+    color: $ColorBlack;
+}
