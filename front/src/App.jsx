@@ -2,6 +2,7 @@ import React from "react";
 import './GlobalCss/Global.scss';
 import Header from "./Header/Header";
 import SectionHero from "./SectionHero/SectionHero";
+import SectionLiveAuctions from "./SectionLiveAuctions/SectionLiveAuctions";
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         <div className="wrapper">
             <Header />
             <SectionHero />
+            <SectionLiveAuctions />
         </div>
     )
 }

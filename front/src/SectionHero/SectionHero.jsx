@@ -6,10 +6,38 @@ import ImageClientsCoinBase from './icon-partners/Vector.png';
 import ImageClientsBitMex from './icon-partners/bitmex 1.png';
 import ImageClientsBlockChain from './icon-partners/Vector (1).png';
 
+
 import './SectionAbout.scss'
+import { useState, useEffect } from "react";
 
 
 function SectionHero() {
+    const [value, setValue] = useState(0);
+    const [valueSecond, setValueSecond] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setValue(prevValue => (prevValue + 0.1) % 3);
+        }, 60)
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setValueSecond(prevValue => {
+                if (prevValue >= 200) {
+                    return prevValue = 0;
+                } else
+                    return prevValue + 1
+            })
+
+        }, 60);
+
+        return () => clearInterval(interval)
+    }, []);
+
+
+
     return (
         <section className="section hero">
             <div className="container hero__container">
@@ -57,6 +85,24 @@ function SectionHero() {
                     </div>
                 </div>
                 <div className="hero__images">
+                    <div className='hero__counter-current'>
+                        <div className='hero__counter-current-wrapp'>
+                            <p className='hero__counter-current-text'>
+                                Current bid
+                            </p>
+                            <p className='hero__counter-current-num'>
+                                {value.toFixed(1)}ETH
+                            </p>
+                        </div>
+                        <div className='hero__counter-current-wrapp'>
+                            <p className='hero__counter-current-text'>
+                                Ends in
+                            </p>
+                            <p className='hero__counter-current-num'>
+                                {valueSecond.toFixed(1)}  hrs
+                            </p>
+                        </div>
+                    </div>
                     <img className="hero__image" src={HeroImage} alt="" />
                     <div className="hero__image-about">
                         <p className="hero__image-sub-title">

@@ -1,0 +1,153 @@
+@import '../Variables/Variables.scss';
+
+.live-auctions {
+    margin-top: 200rem;
+    position: relative;
+
+    &__backgrond {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -100;
+        transform: translate(-20%, -50%);
+        animation: translateXYAnimation 1.5s infinite alternate;
+    }
+
+    @keyframes translateXYAnimation {
+        0% {
+            transform: translate(-20%, -50%);
+        }
+
+        50% {
+            transform: translate(-30, -55%);
+            opacity: 0.8;
+        }
+
+        100% {
+            transform: translate(-40%, -50%);
+            opacity: 1;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-family: $FontsFamilyOxanium;
+        font-size: 65rem;
+        color: $ColorWhite;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 110rem;
+            height: 110rem;
+            background-color: #8613A5;
+            position: absolute;
+            border-radius: 100%;
+            z-index: -1;
+            top: 0;
+            left: 50;
+            transform: translate(-40%, -15%);
+        }
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40rem;
+    }
+
+    &__btn {
+        width: 100%;
+        color: $ColorWhite;
+        backdrop-filter: blur(50px);
+        transition: background-image 1s ease;
+
+        &:hover {
+            background-image: linear-gradient(#E9D7A71A, #FDE8B3);
+
+        }
+    }
+
+
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        max-width: 500rem;
+        padding: 30rem;
+        background-color: #3D2942;
+    }
+
+    &__slider-about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30rem 0rem;
+    }
+
+    &__slider-about-sub-title {
+        font-size: 28rem;
+        font-weight: 500;
+        font-family: 'Work Sans';
+        color: $ColorWhite;
+        white-space: nowrap;
+    }
+
+    &__slider-about-text {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    &__slider-icon {
+        width: 55rem;
+    }
+
+    &__icon-like {
+        width: 30rem;
+    }
+
+    &__slider-canc {
+        font-size: 30rem;
+        font-family: 'Work Sans';
+        color: #76607A;
+    }
+
+    &__slider-current {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__slider-current-title {
+        color: #C6BFC8;
+        font-size: 24rem;
+        font-family: 'Work Sans';
+        line-height: 35rem;
+
+    }
+
+    &__slider-current-price {
+        color: $ColorWhite;
+        font-size: 24rem;
+        font-weight: 700;
+        font-family: $FontsFamilyOxanium;
+    }
+
+    &__button-view-all {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 85rem;
+    }
+
+
+
+    .swiper-wrapper {
+        margin-top: 80rem;
+    }
+
+}
